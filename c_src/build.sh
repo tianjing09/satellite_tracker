@@ -1,5 +1,8 @@
 #!/bin/bash
-# build.sh - 编译脚本
+# cd c_src
+# ./build.sh
+# clang -g -o test_c c_src/satellite_tracker.c
+# ./test_c test/
 
 set -e  # 遇到错误停止
 
