@@ -1,4 +1,6 @@
 # test_python_batch.py
+# python3 test_python.py
+
 import ctypes
 import json
 
@@ -26,7 +28,7 @@ lib.extract_trajectories_from_folder.restype = ctypes.c_char_p
 # 调用
 callback = CALLBACK_TYPE(progress_callback)
 result_ptr = lib.extract_trajectories_from_folder(
-    "./test_images/".encode('utf-8'),
+    "./test/".encode('utf-8'),
     callback
 )
 
