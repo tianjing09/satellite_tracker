@@ -381,7 +381,7 @@ char* process_images(const char** image_paths, int count, const char* output_dir
             strcat(item, result.results[i].error);
             strcat(item, "\"");
         }
-        strcat(item, "}");
+        // strcat(item, "}");
         if (i < count - 1) {
             strcat(item, ",");
         }
