@@ -16,11 +16,14 @@ mkdir -p ../lib
 
 # 编译动态库 (供 Python 调用)
 echo "   编译动态库 libsatellite.dylib ..."
-clang -shared -fPIC -o ../lib/libsatellite.dylib satellite_tracker.c
+# 编译动态库（添加 -pthread）
+clang -shared -fPIC -pthread -o ../lib/libsatellite.dylib satellite_tracker.c
 
 # 编译独立测试程序
 echo "   编译测试程序 test_c ..."
-clang -o ../test_c satellite_tracker.c
+# 编译测试程序（添加 -pthread）
+clang -pthread -o ../test_c satellite_tracker.c
+
 
 # 检查编译结果
 if [ -f "../lib/libsatellite.dylib" ]; then
